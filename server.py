@@ -15,7 +15,7 @@ with open('template.html', 'r') as template_file:
 def serve(path = "index.html"):
 	if ".html" in path:
 		mod_html = render_template(path, 
-		forename=forename, lastname=lastname, name=forename+lastname, birthDay=birthDay, 
+		forename=forename, lastname=lastname, name=forename+" "+lastname, birthDay=birthDay, 
 		married=married, age=age, sex=sex, housePrice=housePrice, houseLow=houseLow, 
 		houseHigh=houseHigh, religion="Buddhism", summary=summary, connectNum=connectNum, 
 		employed=employed, salaryTotal=salaryTotal, jobInfo=jobInfo, month_name=month_name)
