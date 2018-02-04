@@ -24,7 +24,10 @@ for item in content:
 		debit += item["amount"]
 	elif item["method"] == "CREDIT":
 		credit += item["amount"]
-print(debit)
-print(credit)
+
 ratio = debit/credit
-print(ratio)
+
+if __name__ == "__main__":
+	print(debit)
+	print(credit)
+	print(ratio)

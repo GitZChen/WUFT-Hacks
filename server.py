@@ -4,6 +4,7 @@ from calendar import month_name, month_abbr
 
 exec(open('profile.py').read())
 exec(open('linkedin.py').read())
+exec(open('transaction.py').read())
 
 app = Flask(__name__, template_folder='./')
 
@@ -18,7 +19,8 @@ def serve(path = "index.html"):
 		forename=forename, lastname=lastname, name=forename+" "+lastname, birthDay=birthDay, 
 		married=married, age=age, sex=sex, housePrice=housePrice, houseLow=houseLow, 
 		houseHigh=houseHigh, religion="Buddhism", summary=summary, connectNum=connectNum, 
-		employed=employed, salaryTotal=salaryTotal, jobInfo=jobInfo, month_name=month_name)
+		employed=employed, salaryTotal=salaryTotal, jobInfo=jobInfo, month_name=month_name,
+		ratio=ratio, credit=credit, debit=debit)
 		return render_template('template.html', content=Markup(mod_html))
 	try:
 		file = open(path, 'r')
